@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>pin</title>
+</head>
+<body class="bg-blue-700">
+    <div class="flex justify-center mt-32 mb-32">
+        <div  class="flex justify-center item-center">
+        <img src="/SOAL-UJIKOM-main/img/pin.png" alt="pin">
+        </div>
+        <div class="text-center mt-10 space-y-20 item">
+            <h1 class="text-white text-4xl font-bold">MASUKAN PIN</h1>
+        
+        <div class="text-4xl">
+        <form action="" onsubmit="pin()">
+            <input type="password" class="text-black rounded-md px-2 placeholder:items-center" id="pinku" placeholder="Input your pin" required>
+
+            <input type="submit" class="text-white" value="ENTER">
+          </form>
+        </div>
+
+            <h1 class="text-center text-white text-4xl font-bold">TEKAN 'ENTER' JIKA SELESAI <br> MEMASUKAN PIN</h1>
+    </div>
+    
+</body>
+<script>
+    function pin(){
+      let pin = document.getElementById("pinku").value;
+      console.info(pin);
+      if (pin == '123456') {
+        window.open('/src/tunai.html/', '_blank');
+        window.close();
+      } else {
+        alert('The pin you entered is wrong')
+      }
+    };
+  </script>
+</html>
